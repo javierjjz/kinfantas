@@ -1,0 +1,37 @@
+
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+#include "stdlib.h"
+
+using namespace std;
+
+void main()
+{float salariob,imp,salarion,afp;
+ cout<<"Ingrese el salario bruto: ";
+ cin>> salariob;
+ if(salariob>2800)
+ {imp=salariob*0.13;
+
+  if (salariob>4000)
+  {afp=salariob*0.1271;
+  }
+   else
+   {afp=0; 
+   }
+ }
+    else
+    {imp=0;
+     afp=0;
+    }
+  salarion=salariob-imp-afp;
+ cout<<"El salario neto es: ";
+ cout<<salarion<<"\n";
+ cout<<"el impuesto es: ";
+ cout<<imp<<"\n";
+ cout<<"el afp es: ";
+ cout<<afp<<"\n";
+getch();
+}
+
+
