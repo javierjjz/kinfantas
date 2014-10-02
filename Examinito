@@ -1,0 +1,61 @@
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+#include "math.h"
+using namespace std;
+void main()
+{int s,opcion,n,a,b,c,d,e,f,A,i,x,y;
+do
+{cout<<" MENU "<<endl;
+ cout<<"1. Serie"<<endl;
+ cout<<"2. Sistema de ecuaciones"<<endl;
+ cout<<"3. Area del triangulo"<<endl;
+ cout<<"0. Salir"<<endl;
+ cout<<"Escoja una opcion";
+ cin>>opcion;
+ switch(opcion)
+ {case 1:cout<<"Serie"<<endl; 
+ cout<<"Ingresar n: ";
+ cin>>n;
+ s=1;
+ for(i=1;i<=n;i++)
+ {if(i%2==0)
+ cout<<s<<endl;
+ else
+ cout<<-s<<endl;
+ }
+ s=s+2;
+ getch();
+ break;
+ case 2:cout<<"Sistema de ecuaciones"<<endl;
+	 cout<<"Ingrese los 6 coeficientes: "<<endl;
+	 cin>>a>>b>>c>>d>>e>>f;
+	 x=((c*e)-(b*f))/((b*d)-(a*e));
+	 y=((f*a)-(d*c))/((b*d-a*e));
+	 while(b*d==a*e)
+		 cout<<"Error, no hay solucion"<<endl;
+	 if(b*d!=a*e)
+	 {cout<<"Las soluciones son: "<<x<<endl<<y<<endl;
+	 }
+	 getch();
+	 break;
+ case 3:cout<<"Area del triangulo: "<<endl;
+	 float a,b,c,A;
+	 cout<<"Ingrese los lados: ";
+	 cin>>a>>b>>c;
+	 s=(a+b+c)/2;
+	 A= sqrt(s*(s-a)*(s-b)*(s-c));
+	 cout<<"El area es: "<<A<<endl;
+	 getch();
+	 break;
+ case 0: cout<<"Salir"<<endl;
+	 getch();
+	 break;
+ default:
+	 cout<<"Error"<<endl;
+	 getch();
+ }
+}while(opcion!=0);
+ system("cls");
+ getch();
+}
