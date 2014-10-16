@@ -1,0 +1,51 @@
+1ºPrograma
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+using namespace std;
+
+void main()
+{int n,x,b,i;
+ float s,t,f;
+ cout<<"Ingrese un numero: ";
+ cin>>n;
+ cout<<"Ingrese la base: ";
+ cin>>x;
+ s=5;
+ i=1;
+ f=1;
+ b=1;
+ while(i<=n)
+ {b=b*x;
+  f=f*i;
+  t=b/f;
+  s=s+t;
+  i=i+2;
+ }
+ cout<<"La suma es: "<<s<<endl;
+ getch();
+}
+2ºPrograma
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+using namespace std;
+void main()
+{int n,b,r,s;
+ float i;
+ cout<<"Ingrese un numero: ";
+ cin>>n;
+ cout<<"Ingrese la base: ";
+ cin>>r;
+ b=1;
+ s=0;
+  for(i=1;i<=n;i++)
+  {b=n%r;
+   n=n/r;
+   s=s*b+powf(10,i);
+  }
+ cout<<"EL numero es: "<<s<<endl;
+ getch();
+}
