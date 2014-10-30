@@ -1,0 +1,71 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "stdlib.h"
+using namespace std;
+
+float t(float b,float h);
+float c(float r);
+int s(int n);
+
+int main()
+{int n,i,op,valor,S;
+ float b,h,T,C,r;
+ do
+ {cout<<"MENU"<<endl;
+  cout<<"1.Area del Triangulo"<<endl;
+  cout<<"2.Area de la Circunferencia"<<endl;
+  cout<<"3.Suma"<<endl;
+  cout<<"4.FIN"<<endl;
+  cout<<"Ingrese la opcion: ";
+  cin>>op;
+  switch(op)
+  {case 1:cout<<"Ingrese la base: "<<endl;
+          cin>>b;
+		  cout<<"Ingrese la altura: "<<endl;
+		  cin>>h;
+		  T=t(b,h);
+		  cout<<"El area es: "<<T<<endl;
+		  break;
+		  getch();
+  case 2:cout<<"Ingrese el radio: "<<endl;
+	     cin>>r;
+		 C=c(r);
+		 cout<<"El area es: "<<C<<endl;
+		 break;
+		 getch();
+  case 3:cout<<"Ingrese el numero: "<<endl;
+	     cin>>n;
+		 S=s(n);
+		 cout<<"La suma es: "<<S<<endl;
+		 break;
+		 gech();
+  case 4:cout<<"FIN"<<endl;
+	     break;
+		 getch();
+  default:cout<<"ERROR"<<endl;
+  }
+  system("cls");
+  }while(op!=4);
+  getch();
+}
+float t(float b,float h)
+{float T;
+ T=(b*h)/2;
+ return T;
+}
+float c(float r)
+{float C;
+ C=3.1416*r*r;
+ return C;
+}
+int s(int n)
+{int S,i;
+ S=0;
+ i=2;
+ while(i<=n)
+ {S=S+i;
+  i=1+2;
+ }
+ return S;
+}
